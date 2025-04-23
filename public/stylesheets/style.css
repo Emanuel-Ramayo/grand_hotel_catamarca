@@ -26,8 +26,14 @@ body {
 
 .contenedor {
     width: 90%;
-    max-width: 1200px;
     margin: auto;
+}
+.contenedor ul{
+    padding-left: 15px;
+}
+.contenedor li ul{
+    margin-top: 5px; 
+    margin-left: 20px;
 }
 
 /* NAVBAR */
@@ -99,7 +105,7 @@ body {
     z-index: 999;
 }
 
-/* SUBMENÚ */
+/* Submenú */
 .tiene-submenu {
     position: relative;
 }
@@ -133,22 +139,14 @@ body {
     background-color: var(--acento);
 }
 
-/* Mostrar submenú al hacer hover en escritorio */
+/* Mostrar submenú al hacer clic en escritorio y móvil */
 @media (min-width: 769px) {
-    .tiene-submenu:hover .submenu {
-        display: block;
+    .tiene-submenu.activo .submenu {
+        display: block; /* Muestra el submenú al hacer clic */
     }
 }
 
-/* Mostrar submenú manualmente en móvil */
-.submenu.activo {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 0;
-    left: 0;
-    padding-left: 1rem;
-}
+
 
 /* SECCIÓN PRINCIPAL */
 .seccion-principal {
@@ -576,7 +574,7 @@ footer p {
     gap: 0.5rem;
 }
 
-.campo-form label {
+.campo-form label, legend {
     font-size: 1rem;
     color: var(--primario);
     font-weight: bold;
@@ -707,6 +705,8 @@ footer p {
     transform: scale(1.05);
   }
 
+  
+
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
@@ -748,29 +748,7 @@ footer p {
     margin-bottom: 2rem;
 }
 /* Sección desayuno */
-#desayuno {
-    padding: 50px 20px;
-    background-color: var(--secundario);
-    color: var(--texto);
-}
 
-#desayuno h2 {
-    text-align: center;
-    font-family: var(--fuente-titulo);
-    font-size: 2.5rem;
-    color: var(--primario);
-    margin-bottom: 1.5rem;
-}
-
-#desayuno p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-#desayuno p strong {
-    font-weight: 700;
-}
 
 /* Contenedor de las imágenes */
 .imagenes-desayuno {
@@ -784,7 +762,7 @@ footer p {
 /* Estilo para las imágenes */
 .imagenes-desayuno img {
     width: 100%;
-    height: 200px; /* Establecer una altura fija para todas las imágenes */
+    height: 250px; /* Establecer una altura fija para todas las imágenes */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -796,29 +774,7 @@ footer p {
     transform: scale(1.05);
 }
 /* SECCIÓN LIMPIEZA */
-#limpieza {
-    padding: 50px 20px;
-    background-color: var(--secundario);
-    color: var(--texto);
-}
 
-#limpieza h2 {
-    text-align: center;
-    font-family: var(--fuente-titulo);
-    font-size: 2.5rem;
-    color: var(--primario);
-    margin-bottom: 1.5rem;
-}
-
-#limpieza p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-#limpieza p strong {
-    font-weight: 700;
-}
 .imagenes-limpieza {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila en pantallas grandes */
@@ -830,7 +786,7 @@ footer p {
 /* Estilo para las imágenes */
 .imagenes-limpieza img {
     width: 100%;
-    height: 200px; /* Establecer una altura fija para todas las imágenes */
+    height: 250px; /* Establecer una altura fija para todas las imágenes */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -842,6 +798,15 @@ footer p {
     transform: scale(1.05);
 }
 
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+#formulario-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
@@ -973,36 +938,13 @@ footer p {
     .boton:hover {
         background-color: var(--primario);
     }
-    #desayuno {
-        padding: 40px 10px;
-    }
-
-    #desayuno h2 {
-        font-size: 2rem;
-    }
-
-    #desayuno p {
-        font-size: 1rem;
-    }
-
     /* En pantallas pequeñas, las imágenes ocupan el 100% del contenedor (una imagen por fila) */
     .imagenes-desayuno {
         grid-template-columns: 1fr; /* Una imagen por fila en dispositivos móviles */
     }
 
     .imagenes-desayuno img {
-        height: 150px; /* Ajustar altura en pantallas pequeñas */
-    }
-    #limpieza {
-        padding: 40px 10px;
-    }
-
-    #limpieza h2 {
-        font-size: 2rem;
-    }
-
-    #limpieza p {
-        font-size: 1rem;
+        height: 200px; /* Ajustar altura en pantallas pequeñas */
     }
 
     /* En pantallas pequeñas, las imágenes ocupan el 100% del contenedor (una imagen por fila) */
@@ -1011,7 +953,7 @@ footer p {
     }
 
     .imagenes-limpieza img {
-        height: 150px; /* Ajustar altura en pantallas pequeñas */
+        height: 200px; /* Ajustar altura en pantallas pequeñas */
     }
 
 }

@@ -4,62 +4,76 @@
     <body>
         <!-- HEADER -->
         <%- include('partials/header') %>
-        <main>
-            <section class="contenedor">
-                <div>
-                    <h1>Habitación familiar</h1>
-                    <h3>Detalles</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro harum eaque, aspernatur praesentium debitis laudantium non, officiis iste dolorem nulla atque quo repellat provident rem deleniti possimus. Dolorem, tenetur maiores.</p>
-                </div>
-            
-                <div class="galeria-habitacion">
-                    <div class="imagen-principal-contenedor">
-                      <button class="btn-navegacion izquierda">&#10094;</button>
-                      <img class="imagen-principal" src="./images/habitacion1/1-260.jpg" alt="Principal" />
-                      <button class="btn-navegacion derecha">&#10095;</button>
+            <main>
+                <section class="contenedor">
+                    <div>
+                        <h2>Habitación familiar</h2>
+                        <h3>Detalles</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro harum eaque, aspernatur
+                            praesentium debitis laudantium non, officiis iste dolorem nulla atque quo repellat provident
+                            rem deleniti possimus. Dolorem, tenetur maiores.</p>
+                        <p><strong>Check-in:</strong> 14:00 hs</p>
+                        <p><strong>Check-out:</strong> 10:00 hs</p>
                     </div>
-                    <div class="miniaturas">
-                      <img src="./images/habitacion1/1-260.jpg" alt=""/>
-                      <img src="./images/habitacion1/1-125.jpg" alt="">
-                      <img src="./images/habitacion1/1-165.jpg" alt="" />
-                    </div>
-                  </div>
-                  
-        
-            </section>
-            <section id="formulario-reserva" class="formulario-contacto" class="contenedor">
-                <h2>Consulta disponibilidad</h2>
-                <form action="/controllers/formulario-reserva.js" method="POST">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required><br><br>
-            
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-            
-                    <label for="fecha_ingreso">Fecha de Ingreso:</label>
-                    <input type="date" id="fecha_ingreso" name="fecha_ingreso" required><br><br>
-            
-                    <label for="fecha_salida">Fecha de Salida:</label>
-                    <input type="date" id="fecha_salida" name="fecha_salida" required><br><br>
-            
-                        <div>
-                            <legend>Habitación:</legend>
-                        <label for="cama_2plazas">
-                            <input type="radio" id="cama_2plazas" name="habitacion" value="Cama 2 Plazas" required>
-                            Cama de 2 Plazas +  2 Camas de 1½ Plazas
-                        </label>
-                        </div>
-                    <button type="submit" class="btn">Enviar</button>
-                </form>
-            </section>
-        
-        </main>
+                    <!-- servicios incluidos -->
+                    <%- include('partials/servicios-habitacion') %>
 
-                    <!-- FOOTER -->
-        <%- include('partials/footer') %>
-        <script src="/javascripts/script.js"></script>
-        <script src="/javascripts/galeria-habitacion.js"></script>
-        <script src="/javascripts/formulario-reserva.js"></script>
+                        <div class="galeria-habitacion">
+                            <div class="imagen-principal-contenedor">
+                                <button class="btn-navegacion izquierda">&#10094;</button>
+                                <img class="imagen-principal" src="./images/habitacion1/1-260.jpg" alt="Principal" />
+                                <button class="btn-navegacion derecha">&#10095;</button>
+                            </div>
+                            <div class="miniaturas">
+                                <img src="./images/habitacion1/1-260.jpg" alt="" />
+                                <img src="./images/habitacion1/1-125.jpg" alt="">
+                                <img src="./images/habitacion1/1-165.jpg" alt="" />
+                            </div>
+                        </div>
+
+
+                </section>
+                <section id="formulario-reserva" class="contenedor">
+                    <div class="formulario-contacto" >
+                    <form action="./javascript/formulario-reserva.js" method="POST">
+                        <h2>Consulta disponibilidad</h2>
+                        <div class="campo-form">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombrre" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                            <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="fecha_salida">Fecha de Salida:</label>
+                            <input type="date" id="fecha_salida" name="fecha_salida" required>
+                        </div>
+
+                        <div>
+                            <legend>Habitación :</legend>
+                            <label for="habitacion_familiar">
+                                <input type="radio" id="habitacion_familiar" name="habitacion" value="Familiar"
+                                    required>
+                                Habitación Familiar
+                            </label>
+                        </div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                </div>
+                </section>
+
+            </main>
+
+            <!-- FOOTER -->
+            <%- include('partials/footer') %>
+                <script src="/javascripts/script.js"></script>
+                <script src="/javascripts/galeria-habitacion.js"></script>
+                <script src="/javascripts/formulario-reserva.js"></script>
     </body>
 
     </html>

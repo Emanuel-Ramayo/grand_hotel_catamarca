@@ -7,19 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
     enlacesNavegacion.classList.toggle("activo");
   });
 
-  // Submenú desplegable para móviles
-  const tieneSubmenu = document.querySelector(".tiene-submenu > a");
+  // Submenú desplegable para móvil y escritorio
+  const tieneSubmenu = document.querySelectorAll(".tiene-submenu > a");
 
-  tieneSubmenu.addEventListener("click", function (e) {
-    // Evita que se redirija al ancla
-    e.preventDefault();
+  tieneSubmenu.forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      // Evita que se redirija al ancla
+      e.preventDefault();
 
-    const submenu = this.nextElementSibling;
+      const submenu = this.nextElementSibling;
 
-    // Toggle clase para mostrar u ocultar
-    submenu.classList.toggle("activo");
+      // Alterna la clase 'activo' para mostrar u ocultar el submenú
+      this.parentElement.classList.toggle("activo");
+    });
   });
 });
+
 
 // Galería desplazable
 const leftBtn = document.querySelector('.boton-galeria.izquierda');
