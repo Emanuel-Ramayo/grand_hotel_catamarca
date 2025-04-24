@@ -974,6 +974,9 @@ footer p {
         height: 200px;
         /* Ajustar altura en pantallas pequeñas */
     }
+    .tiene-submenu.activo .submenu {
+        display: block; /* Muestra el submenú al hacer clic */
+    }
 
 }
 
