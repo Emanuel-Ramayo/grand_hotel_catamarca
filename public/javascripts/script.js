@@ -56,4 +56,3 @@ closeModal.addEventListener('click', () => {
 modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.style.display = 'none';
 });
-

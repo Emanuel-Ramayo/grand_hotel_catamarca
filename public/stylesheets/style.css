@@ -832,6 +832,7 @@ footer p {
     .seccion-principal p {
         font-size: 1rem;
     }
+
     footer .contenedor {
         flex-direction: column;
         align-items: center;
@@ -846,63 +847,73 @@ footer p {
         flex-direction: column;
         justify-content: center;
     }
+
     .contacto-izquierda,
     .contacto-derecha {
         flex: 1 1 50%;
     }
+
     .imagen-principal-contenedor img {
-      max-height: 350px;
+        max-height: 350px;
     }
-  
+
     .btn-navegacion {
-      font-size: 24px;
-      padding: 8px;
+        font-size: 24px;
+        padding: 8px;
     }
-  
+
     .miniaturas {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      padding-bottom: 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
     }
-  
+
     .miniaturas img {
-      width: 80px;
-      height: 60px;
-      flex: 0 0 auto;
+        width: 80px;
+        height: 60px;
+        flex: 0 0 auto;
     }
+
     .seccion-principal-servicios h1 {
         font-size: 2rem;
     }
-    
+
     .seccion-principal-servicios p {
         font-size: 1rem;
     }
+
     .ubicacion-info-galeria {
         flex-direction: column;
-        align-items: center; /* Centra los elementos en el contenedor */
+        align-items: center;
+        /* Centra los elementos en el contenedor */
         justify-content: center;
-        text-align: center; /* Asegura que el texto también se alinee al centro */
+        text-align: center;
+        /* Asegura que el texto también se alinee al centro */
     }
 
     /* La información ocupa el 100% del contenedor en móvil */
     .ubicacion-info {
         width: 100%;
-        text-align: justify; /* Justifica el texto */
-        margin-bottom: 20px; /* Para dar espacio entre el texto y el botón */
+        text-align: justify;
+        /* Justifica el texto */
+        margin-bottom: 20px;
+        /* Para dar espacio entre el texto y el botón */
     }
 
     /* Las imágenes de la galería ocuparán el 90% del contenedor */
     .galeria-ubicacion {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adaptable a pantallas pequeñas */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* Adaptable a pantallas pequeñas */
         gap: 10px;
         justify-content: center;
     }
 
     .galeria-ubicacion img {
         width: 100%;
-        height: 150px; /* Establecemos una altura fija en móvil también */
+        height: 150px;
+        /* Establecemos una altura fija en móvil también */
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -915,13 +926,15 @@ footer p {
 
     /* Ajustes del texto */
     .ubicacion-info p {
-        font-size: 1rem; /* Ajuste de tamaño de texto */
+        font-size: 1rem;
+        /* Ajuste de tamaño de texto */
         margin: 1rem 0;
     }
 
     /* Botón centrado */
     .boton {
-        display: block; /* Para asegurarnos que se comporta como un bloque */
+        display: block;
+        /* Para asegurarnos que se comporta como un bloque */
         padding: 12px 20px;
         background-color: var(--acento);
         color: white;
@@ -932,28 +945,34 @@ footer p {
         font-size: 1rem;
         transition: background-color 0.3s ease;
         width: 40%;
-        margin: 20px auto; /* Centra el botón y le da un margen superior e inferior */
+        margin: 20px auto;
+        /* Centra el botón y le da un margen superior e inferior */
     }
 
     .boton:hover {
         background-color: var(--primario);
     }
+
     /* En pantallas pequeñas, las imágenes ocupan el 100% del contenedor (una imagen por fila) */
     .imagenes-desayuno {
-        grid-template-columns: 1fr; /* Una imagen por fila en dispositivos móviles */
+        grid-template-columns: 1fr;
+        /* Una imagen por fila en dispositivos móviles */
     }
 
     .imagenes-desayuno img {
-        height: 200px; /* Ajustar altura en pantallas pequeñas */
+        height: 200px;
+        /* Ajustar altura en pantallas pequeñas */
     }
 
     /* En pantallas pequeñas, las imágenes ocupan el 100% del contenedor (una imagen por fila) */
     .imagenes-limpieza {
-        grid-template-columns: 1fr; /* Una imagen por fila en dispositivos móviles */
+        grid-template-columns: 1fr;
+        /* Una imagen por fila en dispositivos móviles */
     }
 
     .imagenes-limpieza img {
-        height: 200px; /* Ajustar altura en pantallas pequeñas */
+        height: 200px;
+        /* Ajustar altura en pantallas pequeñas */
     }
 
 }
