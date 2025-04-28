@@ -3,145 +3,159 @@
 
 
     <body>
-<!-- HEADER -->
-<%- include('partials/header') %>
-        <main>
+        <!-- HEADER -->
+        <%- include('partials/header') %>
+            <main>
 
 
-            <!-- Sección Principal -->
-            <section id="inicio" class="seccion-principal">
-                <div class="contenido-principal">
-                    <h1>Bienvenido al Grand Hotel</h1>
-                    <p>Experiencia de lujo en el corazón de la ciudad</p>
-                    <a href="#habitaciones" class="boton">Ver Habitaciones</a>
-                </div>
-            </section>
-
-            <!-- Sección Sobre Nosotros -->
-            <section id="nosotros" class="seccion">
-                <div class="contenedor">
-                    <h2>Sobre Nosotros</h2>
-                    <div class="contenido-nosotros">
-                        <div class="texto-nosotros">
-                            <h3>Un Hotel con historia</h3>
-                            <p>Grand Hotel es un hotel gestado en familia.</p>
-                            <p>La impronta de calidez y hogar se respira en todo el hotel.</p>
-                            <p>Ubicado en un lugar privilegiado de la ciudad de Catamarca.</p>
-                            <p>Un lugar dónde la sensibilidad del servicio es única.</p>
-                            <h3>Nuestros Valores</h3>
-                            <ul>
-                                <li>Excelencia en servicio</li>
-                                <li>Atención personalizada</li>
-                                <li>Comodidad de primera clase</li>
-                            </ul>
-                        </div>
-                        <div class="imagen-nosotros">
-                            <img src="/images/galeria/1-365.jpg" alt="Nuestro Hotel">
-                        </div>
+                <!-- Sección Principal -->
+                <section id="inicio" class="seccion-principal">
+                    <div class="contenido-principal">
+                        <h1>Bienvenido al Grand Hotel</h1>
+                        <p>Experiencia de lujo en el corazón de la ciudad</p>
+                        <a href="#habitaciones" class="boton">Ver Habitaciones</a>
                     </div>
-                </div>
-            </section>
-            <!-- Sección Ubicación -->
-            <section id="ubicacion" class="seccion">
-                <div class="contenedor">
-                    <h2>Ubicación</h2>
-                    <div class="ubicacion-info-galeria">
-                        <div class="galeria-ubicacion">
-                            <img src="/images/ubicacion/alameda.jpg" alt="Foto de plaza La Alameda">
-                            <img src="/images/ubicacion/catedral.jpg" alt="Foto de la Catedral">
-                            <img src="/images/ubicacion/plaza25deMayo.jpeg" alt="Foto de la plaza 25 de Mayo">
-                            <img src="/images/ubicacion/museo-de-la-ciudad-sfvc.jpg" alt="Foto del museo de la ciudad">
-                            <img src="/images/ubicacion/parquedelosvientos.jpeg" alt="Foto del parque de los vientos">
-                            <img src="/images/ubicacion/eljumeal.JPG" alt="Foto de ciudad desde el dique">
+                </section>
+                <!-- Sección oferta -->
+                <%- include('partials/promo') %>
 
-                        </div>
-                        <div class="ubicacion-info">
-                            <p>El hotel se encuentra ubicado en una zona privilegiada de la ciudad, frente a la plaza
-                                "La
-                                alameda", un oasis
-                                verde en plena ciudad. Un hermoso ambiente para disfrutar si tiene niños, ya que tiene
-                                muchos
-                                juegos y un carrusel.</p>
-                            <p>Se encuentra a 5 minutos del casco centrico de la ciudad, dónde se encontrará con la
-                                plaza principal "25 de Mayo", la cual se encuentra frente a la Catedral
-                                Basílica de Nuestra Señora del Valle. Allí también encontrará una zona de bares frente a
-                                la
-                                plaza, museos, el cine teatro y el inicio de la peatonal de compras de la ciudad.</p>
-                            <p>En la zona alta de la ciudad se encuentra el "Parque de los vientos" a metros del dique "
-                                El jumeal". Un lugar dónde se encuentra un punto panorámico que se ve toda ciudad, sin
-                                dudas un lugar recomendado para visitar. </p>
-                            <a href="https://maps.app.goo.gl/oRsNv8No4sNeqtjN8" target="_blank"
-                                rel="noopener noreferrer" class="boton">Ver mapa</a>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Sección Habitaciones -->
-            <section id="habitaciones" class="seccion fondo-claro">
-                <div class="contenedor">
-                    <h2>Nuestras Habitaciones</h2>
-                    <div class="rejilla-habitaciones">
-
-                        <!-- Habitación 1 -->
-                        <div class="tarjeta-habitacion">
-                            <img src="/images/habitacion1/1-125.jpg" alt="Habitación simple">
-                            <div class="info-habitacion">
-                                <h3>Habitación Simple</h3>
-                                <p>Amplia habitación con vista a la ciudad y amenidades premium.</p>
-                                <div class="caracteristicas-habitacion">
-                                    <span><i class="fas fa-bed"></i> 1 Cama King</span>
+                    <!-- Sección Sobre Nosotros -->
+                    <section id="nosotros" class="seccion">
+                        <div class="contenedor">
+                            <h2>Sobre Nosotros</h2>
+                            <div class="contenido-nosotros">
+                                <div class="texto-nosotros">
+                                    <h3>Un Hotel con historia</h3>
+                                    <p>Grand Hotel es un hotel gestado en familia.</p>
+                                    <p>La impronta de calidez y hogar se respira en todo el hotel.</p>
+                                    <p>Ubicado en un lugar privilegiado de la ciudad de Catamarca.</p>
+                                    <p>Un lugar dónde la sensibilidad del servicio es única.</p>
+                                    <h3>Nuestros Valores</h3>
+                                    <ul>
+                                        <li>Excelencia en servicio</li>
+                                        <li>Atención personalizada</li>
+                                        <li>Comodidad de primera clase</li>
+                                    </ul>
                                 </div>
-                                <a href="/habitacion-simple" class="boton">Ver Más</a>
-
+                                <div class="imagen-nosotros">
+                                    <img src="/images/galeria/1-365.jpg" alt="Nuestro Hotel">
+                                </div>
                             </div>
                         </div>
+                    </section>
+                    <!-- Sección Ubicación -->
+                    <section id="ubicacion" class="seccion">
+                        <div class="contenedor">
+                            <h2>Ubicación</h2>
+                            <div class="ubicacion-info-galeria">
+                                <div class="galeria-ubicacion">
+                                    <img src="/images/ubicacion/alameda.jpg" alt="Foto de plaza La Alameda">
+                                    <img src="/images/ubicacion/catedral.jpg" alt="Foto de la Catedral">
+                                    <img src="/images/ubicacion/plaza25deMayo.jpeg" alt="Foto de la plaza 25 de Mayo">
+                                    <img src="/images/ubicacion/museo-de-la-ciudad-sfvc.jpg"
+                                        alt="Foto del museo de la ciudad">
+                                    <img src="/images/ubicacion/parquedelosvientos.jpeg"
+                                        alt="Foto del parque de los vientos">
+                                    <img src="/images/ubicacion/eljumeal.JPG" alt="Foto de ciudad desde el dique">
 
-                        <!-- Habitación 2 -->
-                        <div class="tarjeta-habitacion">
-                            <img src="/images/habitacion1/1-260.jpg" alt="Habitación Doble">
-                            <div class="info-habitacion">
-                                <h3>Habitación Doble</h3>
-                                <p>Habitación espaciosa con vistas al jardín y detalles modernos.</p>
-                                <div class="caracteristicas-habitacion">
-                                    <span><i class="fas fa-bed"></i> 1 Cama 2 plazas ó 2 Camas 1 1/2 plazas</span>
                                 </div>
-                                <a href="/habitacion-doble" class="boton">Ver Más</a>
+                                <div class="ubicacion-info">
+                                    <p>El hotel se encuentra ubicado en una zona privilegiada de la ciudad, frente a la
+                                        plaza
+                                        "La
+                                        alameda", un oasis
+                                        verde en plena ciudad. Un hermoso ambiente para disfrutar si tiene niños, ya que
+                                        tiene
+                                        muchos
+                                        juegos y un carrusel.</p>
+                                    <p>Se encuentra a 5 minutos del casco centrico de la ciudad, dónde se encontrará con
+                                        la
+                                        plaza principal "25 de Mayo", la cual se encuentra frente a la Catedral
+                                        Basílica de Nuestra Señora del Valle. Allí también encontrará una zona de bares
+                                        frente a
+                                        la
+                                        plaza, museos, el cine teatro y el inicio de la peatonal de compras de la
+                                        ciudad.</p>
+                                    <p>En la zona alta de la ciudad se encuentra el "Parque de los vientos" a metros del
+                                        dique "
+                                        El jumeal". Un lugar dónde se encuentra un punto panorámico que se ve toda
+                                        ciudad, sin
+                                        dudas un lugar recomendado para visitar. </p>
+                                    <a href="https://maps.app.goo.gl/oRsNv8No4sNeqtjN8" target="_blank"
+                                        rel="noopener noreferrer" class="boton">Ver mapa</a>
+
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        <!-- Habitación 3 -->
-                        <div class="tarjeta-habitacion">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
-                                alt="Habitación Triple">
-                            <div class="info-habitacion">
-                                <h3>Habitación Triple</h3>
-                                <p>Habitación acogedora con todos los servicios básicos para su comodidad.</p>
-                                <div class="caracteristicas-habitacion">
-                                    <span><i class="fas fa-bed"></i> 1 Cama 2 plazas + 1 Cama 1 1/2 plazas ó 3 1 1/2
-                                        plazas</span>
+                    <!-- Sección Habitaciones -->
+                    <section id="habitaciones" class="seccion fondo-claro">
+                        <div class="contenedor">
+                            <h2>Nuestras Habitaciones</h2>
+                            <div class="rejilla-habitaciones">
+
+                                <!-- Habitación 1 -->
+                                <div class="tarjeta-habitacion">
+                                    <img src="/images/habitacion1/1-125.jpg" alt="Habitación simple">
+                                    <div class="info-habitacion">
+                                        <h3>Habitación Simple</h3>
+                                        <p>Amplia habitación con vista a la ciudad y amenidades premium.</p>
+                                        <div class="caracteristicas-habitacion">
+                                            <span><i class="fas fa-bed"></i> 1 Cama King</span>
+                                        </div>
+                                        <a href="/habitacion-simple" class="boton">Ver Más</a>
+
+                                    </div>
                                 </div>
-                                <a href="/habitacion-triple" class="boton">Ver Más</a>
+
+                                <!-- Habitación 2 -->
+                                <div class="tarjeta-habitacion">
+                                    <img src="/images/habitacion1/1-260.jpg" alt="Habitación Doble">
+                                    <div class="info-habitacion">
+                                        <h3>Habitación Doble</h3>
+                                        <p>Habitación espaciosa con vistas al jardín y detalles modernos.</p>
+                                        <div class="caracteristicas-habitacion">
+                                            <span><i class="fas fa-bed"></i> 1 Cama 2 plazas ó 2 Camas 1 1/2
+                                                plazas</span>
+                                        </div>
+                                        <a href="/habitacion-doble" class="boton">Ver Más</a>
+                                    </div>
+                                </div>
+
+                                <!-- Habitación 3 -->
+                                <div class="tarjeta-habitacion">
+                                    <img src="/images/habitacion1/1-125.jpg"
+                                        alt="Habitación Triple">
+                                    <div class="info-habitacion">
+                                        <h3>Habitación Triple</h3>
+                                        <p>Habitación acogedora con todos los servicios básicos para su comodidad.</p>
+                                        <div class="caracteristicas-habitacion">
+                                            <span><i class="fas fa-bed"></i> 1 Cama 2 plazas + 1 Cama 1 1/2 plazas ó 3 1
+                                                1/2
+                                                plazas</span>
+                                        </div>
+                                        <a href="/habitacion-triple" class="boton">Ver Más</a>
+                                    </div>
+                                </div>
+
+                                <!-- Habitación 4 -->
+                                <div class="tarjeta-habitacion">
+                                    <img src="/images/habitacion1/1-260.jpg"
+                                        alt="Habitación Familiar">
+                                    <div class="info-habitacion">
+                                        <h3>Habitación Familiar</h3>
+                                        <p>Amplia y cómoda para familias, con zona de estar y vistas espectaculares.</p>
+                                        <div class="caracteristicas-habitacion">
+                                            <span><i class="fas fa-bed"></i> 1 Cama 2 plazas + 3 Camas 1 1/2
+                                                plazas</span>
+                                        </div>
+                                        <a href="/habitacion-familiar" class="boton">Ver Más</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Habitación 4 -->
-                        <div class="tarjeta-habitacion">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
-                                alt="Habitación Familiar">
-                            <div class="info-habitacion">
-                                <h3>Habitación Familiar</h3>
-                                <p>Amplia y cómoda para familias, con zona de estar y vistas espectaculares.</p>
-                                <div class="caracteristicas-habitacion">
-                                    <span><i class="fas fa-bed"></i> 1 Cama 2 plazas + 3 Camas 1 1/2 plazas</span>
-                                </div>
-                                <a href="/habitacion-familiar" class="boton">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
             <!-- Sección Galería -->
             <section id="galeria" class="seccion">
@@ -176,14 +190,13 @@
                     <img class="contenido-modal" id="modal-img">
                 </div>
             </section>
-
-        </main>
-        <!-- FOOTER -->
-        <%- include('partials/footer') %>
-
+            </main>
+            <!-- FOOTER -->
+            <%- include('partials/footer') %>
 
 
-            <script src="/javascripts/script.js"></script>
+
+                <script src="/javascripts/script.js"></script>
     </body>
 
     </html>

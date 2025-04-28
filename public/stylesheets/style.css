@@ -199,6 +199,21 @@ body {
 .boton:hover {
     background-color: var(--primario);
 }
+/* Sección promo */
+#promo .contenido-principal-promo {
+    display: flex;
+    justify-content: center;  /* Centra la imagen horizontalmente */
+    align-items: center;      /* Centra la imagen verticalmente */
+    height: 100%;             /* Asegura que el contenedor tenga una altura suficiente */
+}
+
+#promo .contenido-principal-promo img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; /* O 'contain' si prefieres que no se recorte */
+}
+
+
 
 /* SECCIONES GENERALES */
 .seccion {
@@ -347,12 +362,22 @@ body {
 }
 
 .contenido-modal {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    max-width: 90%;
+    max-width: 90vw;
     max-height: 80vh;
     animation: fadeIn 0.4s;
 }
+
+.contenido-modal img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
 
 .cerrar-modal {
     position: absolute;
@@ -368,6 +393,7 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+  
 
 /* UBICACIÓN */
 .ubicacion-info-galeria {
@@ -797,7 +823,29 @@ footer p {
 .imagenes-limpieza img:hover {
     transform: scale(1.05);
 }
+/* Sección sala de trabajo */
+.imagenes-sala-de-trabajo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+    justify-items: center;
+    margin-top: 2rem;
+}
 
+/* Estilo para las imágenes */
+.imagenes-sala-de-trabajo img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para las imágenes */
+.imagenes-sala-de-trabajo img:hover {
+    transform: scale(1.05);
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 #formulario-reserva {
@@ -976,6 +1024,29 @@ footer p {
     }
     .tiene-submenu.activo .submenu {
         display: block; /* Muestra el submenú al hacer clic */
+    }
+    #promo .contenido-principal-promo img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+    .contenido-modal {
+        max-width: 95vw;
+        max-height: 80vh;
+        padding: 10px;
+      }
+    
+      .contenido-modal img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      .imagenes-sala-de-trabajo {
+        grid-template-columns: 1fr;
+    }
+
+    .imagenes-sala-de-trabajo img {
+        height: 200px;
     }
 
 }
