@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="es">
 <!-- HEAD -->
-<%- include('partials/head') %>
+ <head>
+    <%- include('partials/head') %>
+ </head>
 
     <body>
         <!-- HEADER -->
@@ -7,7 +11,7 @@
             <main>
                 <section class="contenedor">
                     <div>
-                        <h2>Habitación familiar</h2>
+                        <h2>Habitación cuádruple</h2>
                         <h3>Detalles</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro harum eaque, aspernatur
                             praesentium debitis laudantium non, officiis iste dolorem nulla atque quo repellat provident
@@ -21,13 +25,14 @@
                         <div class="galeria-habitacion">
                             <div class="imagen-principal-contenedor">
                                 <button class="btn-navegacion izquierda">&#10094;</button>
-                                <img class="imagen-principal" src="./images/habitacion1/1-260.jpg" alt="Principal" />
+                                <img class="imagen-principal" src="./images/habitacion4/principal1.jpg" alt="Principal" />
                                 <button class="btn-navegacion derecha">&#10095;</button>
                             </div>
                             <div class="miniaturas">
-                                <img src="./images/habitacion1/1-260.jpg" alt="" />
-                                <img src="./images/habitacion1/1-125.jpg" alt="">
-                                <img src="./images/habitacion1/1-165.jpg" alt="" />
+                                <img src="./images/habitacion4/principal1.jpg" alt="" />
+                                <img src="./images/habitacion4/secundaria1.jpg" alt="" />
+                                <img src="./images/habitacion4/principal2.jpg" alt="">
+                                <img src="./images/habitacion4/secundaria2.jpg" alt="" />
                             </div>
                         </div>
 
@@ -39,7 +44,7 @@
                         <h2>Consulta disponibilidad</h2>
                         <div class="campo-form">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombrre" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                         </div>
                         <div class="campo-form">
                             <label for="email">Correo Electrónico:</label>
@@ -57,12 +62,12 @@
                         <div>
                             <legend>Habitación :</legend>
                             <label for="habitacion_familiar">
-                                <input type="radio" id="habitacion_familiar" name="habitacion" value="Familiar"
+                                <input type="radio" id="habitacion_familiar" name="habitacion" value="Cuádruple"
                                     required>
-                                Habitación Familiar
+                                Habitación Cuádruple
                             </label>
                         </div>
-                        <button type="submit" class="btn">Enviar</button>
+                        <input type="submit" id="button" class="btn"></input>
                     </form>
                 </div>
                 </section>

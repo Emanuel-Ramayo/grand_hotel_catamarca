@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html lang="es">
 <!-- HEAD -->
-<%- include('partials/head') %>
-
+ <head>
+    <%- include('partials/head') %>
+ </head>
     <body>
         <!-- HEADER -->
         <%- include('partials/header') %>
@@ -38,7 +41,7 @@
                         <h2>Consulta disponibilidad</h2>
                         <div class="campo-form">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombrre" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
                         </div>
                         <div class="campo-form">
                             <label for="email">Correo Electrónico:</label>
@@ -59,7 +62,7 @@
                                 Habitación Simple
                             </label>
                         </div>
-                        <button type="submit" class="btn">Enviar</button>
+                        <input type="submit" id="button" class="btn"></input>
                     </form>
                 </div>
                 </section>
