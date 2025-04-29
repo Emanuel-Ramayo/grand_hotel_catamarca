@@ -1,75 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- HEAD -->
- <head>
+
+<head>
     <%- include('partials/head') %>
- </head>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
 
-    <body>
-        <!-- HEADER -->
-        <%- include('partials/header') %>
-            <main>
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header') %>
+        <main>
 
-                <!-- Sección contacto -->
-                <section id="contacto" class="seccion-contacto">
-                    <div class="contenedor-contacto">
-                        <!-- Tarjeta izquierda: Información de contacto -->
-                        <div class="contacto-izquierda">
-                            <div class="info-contacto">
-                                <h3>Información de Contacto</h3>
-                                <p><i class="fas fa-map-marker-alt"></i>
-                                    <a href="https://maps.app.goo.gl/oRsNv8No4sNeqtjN8" target="_blank"
-                                        rel="noopener noreferrer">
-                                        Camilo Melet 41, K4700 San Fernando del Valle de Catamarca, Catamarca
-                                    </a>
-                                </p>
-                                <p><i class="fas fa-phone-alt"></i>
-                                    <a href="tel:+5493834426715">+54 9 3834 426715</a>
-                                </p>
-                                <p><i class="fab fa-whatsapp"></i>
-                                    <a href="https://wa.me/5493834219034" target="_blank" rel="noopener noreferrer">+54
-                                        9 3834 219034</a>
-                                </p>
-                                <p><i class="fas fa-envelope"></i>
-                                    <a href="mailto:grandhotelcatamarca@gmail.com">grandhotelcatamarca@gmail.com</a>
-                                </p>
-                            </div>
+            <!-- Sección contacto -->
+            <section id="contacto" class="seccion-contacto">
+                <div class="contenedor-contacto">
+                    <!-- Tarjeta izquierda: Información de contacto -->
+                    <div class="contacto-izquierda">
+                        <div class="info-contacto">
+                            <h3>Información de Contacto</h3>
+                            <p><i class="fas fa-map-marker-alt"></i>
+                                <a href="https://maps.app.goo.gl/oRsNv8No4sNeqtjN8" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Camilo Melet 41, K4700 San Fernando del Valle de Catamarca, Catamarca
+                                </a>
+                            </p>
+                            <p><i class="fas fa-phone-alt"></i>
+                                <a href="tel:+5493834426715">+54 9 3834 426715</a>
+                            </p>
+                            <p><i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/5493834219034" target="_blank" rel="noopener noreferrer">+54
+                                    9 3834 219034</a>
+                            </p>
+                            <p><i class="fas fa-envelope"></i>
+                                <a href="mailto:grandhotelcatamarca@gmail.com">grandhotelcatamarca@gmail.com</a>
+                            </p>
                         </div>
-
-                        <!-- Tarjeta derecha: Formulario -->
-                        <div class="contacto-derecha">
-                            <form class="formulario-contacto" action="/javascripts/formulario-contacto.js" method="POST">
-                                <h3>Dejanos tu consulta</h3>
-                                <!-- Campo de Nombre -->
-                                <div class="campo-form">
-                                    <label for="nombre">Nombre</label>
-                                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"
-                                        required>
-                                </div>
-                                <!-- Campo de Email -->
-                                <div class="campo-form">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
-                                </div>
-                                <!-- Campo de Mensaje -->
-                                <div class="campo-form">
-                                    <label for="mensaje">Mensaje</label>
-                                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"
-                                        required></textarea>
-                                </div>
-                                <!-- Botón de Enviar -->
-                                <button type="submit" class="btn">Enviar Mensaje</button>
-                            </form>
-                        </div>
-
-
                     </div>
-                </section>
-            </main>
-                    <!-- FOOTER -->
-        <%- include('partials/footer') %>
-        <script src="/javascripts/script.js"></script>
-        <script src="/javascripts/formulario-contacto.js"></script>
-    </body>
 
-    </html>
+                    <!-- Tarjeta derecha: Formulario -->
+                    <div class="contacto-derecha">
+                        <form class="formulario-contacto" action="/javascripts/formulario-contacto.js" method="POST">
+                            <h3>Dejanos tu consulta</h3>
+                            <!-- Campo de Nombre -->
+                            <div class="campo-form">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <!-- Campo de Teléfono -->
+                            <div class="campo-form">
+                                <label for="telefono">Teléfono</label>
+                                <input type="text" id="telefono" name="telefono" placeholder="+54...." required>
+                            </div>
+                            <!-- Campo de Email -->
+                            <div class="campo-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+                            </div>
+                            <!-- Campo de Mensaje -->
+                            <div class="campo-form">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"
+                                    required></textarea>
+                            </div>
+                            <!-- Captcha -->
+                            <div class="g-recaptcha" data-sitekey="6Lf22icrAAAAAK5N41XyqHW4h2PrhnsC-DMzgLiW"></div>
+                            <!-- Botón de Enviar -->
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <%- include('partials/footer') %>
+            <script src="/javascripts/script.js"></script>
+            <script src="/javascripts/formulario-contacto.js"></script>
+</body>
+
+</html>

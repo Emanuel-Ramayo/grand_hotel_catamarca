@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- HEAD -->
- <head>
+
+<head>
     <%- include('partials/head') %>
- </head>
-    <body>
-        <!-- HEADER -->
-        <%- include('partials/header') %>
-            <main>
-                <section id="info-habitacion" class="contenedor">
-                    <div>
-                        <h1>Habitación simple</h1>
-                        <h3>Detalles</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro harum eaque, aspernatur
-                            praesentium debitis laudantium non, officiis iste dolorem nulla atque quo repellat provident
-                            rem deleniti possimus. Dolorem, tenetur maiores.</p>
-                        <p><strong>Check-in:</strong> 14:00 hs</p>
-                        <p><strong>Check-out:</strong> 10:00 hs</p>
-                    </div>
-                    <!-- servicios incluidos -->
-                    <%- include('partials/servicios-habitacion') %>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
 
-                        <div class="galeria-habitacion">
-                            <div class="imagen-principal-contenedor">
-                                <button class="btn-navegacion izquierda">&#10094;</button>
-                                <img class="imagen-principal" src="./images/habitacion1/1-260.jpg" alt="Principal" />
-                                <button class="btn-navegacion derecha">&#10095;</button>
-                            </div>
-                            <div class="miniaturas">
-                                <img src="./images/habitacion1/1-260.jpg" alt="" />
-                                <img src="./images/habitacion1/1-125.jpg" alt="">
-                                <img src="./images/habitacion1/1-165.jpg" alt="" />
-                            </div>
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header') %>
+        <main>
+            <section id="info-habitacion" class="contenedor">
+                <div>
+                    <h1>Habitación simple</h1>
+                    <h3>Detalles</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro harum eaque, aspernatur
+                        praesentium debitis laudantium non, officiis iste dolorem nulla atque quo repellat provident
+                        rem deleniti possimus. Dolorem, tenetur maiores.</p>
+                    <p><strong>Check-in:</strong> 14:00 hs</p>
+                    <p><strong>Check-out:</strong> 10:00 hs</p>
+                </div>
+                <!-- servicios incluidos -->
+                <%- include('partials/servicios-habitacion') %>
+
+                    <div class="galeria-habitacion">
+                        <div class="imagen-principal-contenedor">
+                            <button class="btn-navegacion izquierda">&#10094;</button>
+                            <img class="imagen-principal" src="./images/habitacion1/1-260.jpg" alt="Principal" />
+                            <button class="btn-navegacion derecha">&#10095;</button>
                         </div>
+                        <div class="miniaturas">
+                            <img src="./images/habitacion1/1-260.jpg" alt="" />
+                            <img src="./images/habitacion1/1-125.jpg" alt="">
+                            <img src="./images/habitacion1/1-165.jpg" alt="" />
+                        </div>
+                    </div>
 
-                </section>
-                <section id="formulario-reserva" class="contenedor" >
-                    <div class="formulario-contacto">
+            </section>
+            <section id="formulario-reserva" class="contenedor">
+                <div class="formulario-contacto">
                     <form action="/javascripts/formulario-reserva.js" method="POST">
                         <h2>Consulta disponibilidad</h2>
                         <div class="campo-form">
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono" name="telefono" placeholder="+54...." required>
                         </div>
                         <div class="campo-form">
                             <label for="email">Correo Electrónico:</label>
@@ -62,18 +69,20 @@
                                 Habitación Simple
                             </label>
                         </div>
+                        <!-- Captcha -->
+                        <div class="g-recaptcha" data-sitekey="6Lf22icrAAAAAK5N41XyqHW4h2PrhnsC-DMzgLiW"></div>
                         <input type="submit" id="button" class="btn"></input>
                     </form>
                 </div>
-                </section>
+            </section>
 
-            </main>
+        </main>
 
-            <!-- FOOTER -->
-            <%- include('partials/footer') %>
-                <script src="/javascripts/script.js"></script>
-                <script src="/javascripts/galeria-habitacion.js"></script>
-                <script src="/javascripts/formulario-reserva.js"></script>
-    </body>
+        <!-- FOOTER -->
+        <%- include('partials/footer') %>
+            <script src="/javascripts/script.js"></script>
+            <script src="/javascripts/galeria-habitacion.js"></script>
+            <script src="/javascripts/formulario-reserva.js"></script>
+</body>
 
-    </html>
+</html>
