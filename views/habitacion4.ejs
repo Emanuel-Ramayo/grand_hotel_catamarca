@@ -5,6 +5,11 @@
 <head>
     <%- include('partials/head') %>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('xf91sY5apwkOQkJEb')
+        </script>
 </head>
 
 <body>
@@ -67,8 +72,7 @@
                         <div>
                             <legend>Habitación :</legend>
                             <label for="habitacion_familiar">
-                                <input type="radio" id="habitacion" name="habitacion" value="Departamento"
-                                    required>
+                                <input type="radio" id="habitacion" name="habitacion" value="Departamento" required>
                                 Departamento
                             </label>
                         </div>
