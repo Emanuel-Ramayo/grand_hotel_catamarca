@@ -5,6 +5,11 @@
 <head>
     <%- include('partials/head') %>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('Ca98_CedvO1oXBJF8')
+        </script>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
 
                     <!-- Tarjeta derecha: Formulario -->
                     <div class="contacto-derecha">
-                        <form class="formulario-contacto" action="/javascripts/formulario-contacto.js" method="POST">
+                        <form id="form" class="formulario-contacto">
                             <h3>Dejanos tu consulta</h3>
                             <!-- Campo de Nombre -->
                             <div class="campo-form">
@@ -66,7 +71,7 @@
                             <!-- Captcha -->
                             <div class="g-recaptcha" data-sitekey="6Lf22icrAAAAAK5N41XyqHW4h2PrhnsC-DMzgLiW"></div>
                             <!-- Botón de Enviar -->
-                            <button type="submit" class="btn">Enviar Mensaje</button>
+                            <input type="submit" id="button" class="btn"></input>
                         </form>
                     </div>
 

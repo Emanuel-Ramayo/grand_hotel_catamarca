@@ -31,7 +31,7 @@ app.use('/contacto', contactoRouter);
 app.use('/habitacion-simple', habitacion1Router);
 app.use('/habitacion-doble', habitacion2Router);
 app.use('/habitacion-triple', habitacion3Router);
-app.use('/habitacion-cuadruple', habitacion4Router);
+app.use('/departamento', habitacion4Router);
 app.use('/servicios', serviciosRouter);
 
 // 👉 Iniciar servidor
