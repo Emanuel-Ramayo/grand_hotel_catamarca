@@ -1,192 +1,263 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- HEAD -->
- <head>
-<%- include('partials/head') %>
- </head>
+
+<head>
+    <%- include('partials/head') %>
+</head>
 
 
 
-    <body>
-        <!-- HEADER -->
-        <%- include('partials/header') %>
-            <main>
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header') %>
+        <main>
 
 
-                <!-- Sección Principal -->
-                <section id="inicio" class="seccion-principal">
-                    <div class="contenido-principal">
-                        <h1>Bienvenido al Grand Hotel</h1>
-                        <p>Descubra el placer de hospedarse en un lugar donde cada detalle está pensado para usted.</p>
-                        <a href="#habitaciones" class="boton">Ver Habitaciones</a>
-                    </div>
-                </section>
-                <!-- Sección oferta -->
-                <%# include('partials/promo') %>
-
-                    <!-- Sección Sobre Nosotros -->
-                    <section id="nosotros" class="seccion">
-                        <div class="contenedor">
-                            <h2>Sobre Nosotros</h2>
-                            <div class="contenido-nosotros">
-                                <div class="texto-nosotros">
-                                    <h3>Un Hotel con historia</h3>
-                                    <p>Grand Hotel es un hotel con la impronta de una familia Italiana con calidez de hogar. </p>
-                                    
-                                    <h3>Nuestros Valores</h3>
-                                    <ul>
-                                        <li>Excelencia en servicio</li>
-                                        <li>Atención personalizada</li>
-                                        <li>Cuidado y seguridad grantizada</li>
-                                    </ul>
-
-                                </div>
-                                <div class="imagen-nosotros">
-                                    <img src="/images/galeria/1-368.jpg" alt="Nuestro Hotel">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Sección Ubicación -->
-                    <section id="ubicacion" class="seccion">
-                        <div class="contenedor">
-                            <h2>Ubicación</h2>
-                            <div class="ubicacion-info-galeria">
-                                <div class="galeria-ubicacion">
-                                    <img src="/images/ubicacion/alameda.jpg" alt="Foto de plaza La Alameda">
-                                    <img src="/images/ubicacion/carrusel-juegos.jpg"
-                                    alt="Foto de juegos en plaza La Alameda">
-                                    <img src="/images/ubicacion/catedral.jpg" alt="Foto de la Catedral">
-                                    <img src="/images/ubicacion/plaza25deMayo.jpeg" alt="Foto de la plaza 25 de Mayo">
-
-                                    <img src="/images/ubicacion/parquedelosvientos.jpeg"
-                                        alt="Foto del parque de los vientos">
-                                    <img src="/images/ubicacion/eljumeal.JPG" alt="Foto de ciudad desde el dique">
-
-                                </div>
-                                <div class="ubicacion-info">
-                                    <p>El hotel se encuentra ubicado en una zona privilegiada de la ciudad, frente a la
-                                        plaza
-                                        "La
-                                        alameda", un oasis
-                                        verde en plena ciudad. Un hermoso ambiente para disfrutar si tiene niños, ya que
-                                        tiene
-                                        muchos
-                                        juegos y un carrusel.</p>
-                                    <p>Se encuentra a 5 minutos del casco centrico de la ciudad, dónde se encontrará con
-                                        la
-                                        plaza principal "25 de Mayo", la cual se encuentra frente a la Catedral
-                                        Basílica de Nuestra Señora del Valle. Allí también encontrará una zona de bares
-                                        frente a
-                                        la
-                                        plaza, museos, el cine teatro y el inicio de la peatonal de compras de la
-                                        ciudad.</p>
-                                    <p>En la zona alta de la ciudad se encuentra el "Parque de los vientos" a metros del
-                                        dique "
-                                        El jumeal". Un lugar dónde se encuentra un punto panorámico que se ve toda
-                                        ciudad, sin
-                                        dudas un lugar recomendado para visitar. </p>
-                                    <a href="https://maps.app.goo.gl/oRsNv8No4sNeqtjN8" target="_blank"
-                                        rel="noopener noreferrer" class="boton">Ver mapa</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Sección Habitaciones -->
-                    <section id="habitaciones" class="seccion fondo-claro">
-                        <div class="contenedor">
-                            <h2>Nuestras Habitaciones</h2>
-                            <div class="rejilla-habitaciones">
-
-                                <!-- Habitación 1 -->
-                                <div class="tarjeta-habitacion">
-                                    <img src="/images/habitacion1/simple.jpeg" alt="Habitación simple">
-                                    <div class="info-habitacion">
-                                        <h3>Habitación Simple</h3>
-
-                                        <a href="/habitacion-simple" class="boton">Ver Más</a>
-
-                                    </div>
-                                </div>
-
-                                <!-- Habitación 2 -->
-                                <div class="tarjeta-habitacion">
-                                    <img src="/images/habitacion2/1-260.jpg" alt="Habitación Doble">
-                                    <div class="info-habitacion">
-                                        <h3>Habitación Doble</h3>
-
-                                        <a href="/habitacion-doble" class="boton">Ver Más</a>
-                                    </div>
-                                </div>
-
-                                <!-- Habitación 3 -->
-                                <div class="tarjeta-habitacion">
-                                    <img src="./images/habitacion3/principal.jpg"
-                                        alt="Habitación Triple">
-                                    <div class="info-habitacion">
-                                        <h3>Habitación Triple</h3>
-
-                                        <a href="/habitacion-triple" class="boton">Ver Más</a>
-                                    </div>
-                                </div>
-
-                                <!-- Habitación 4 -->
-                                <div class="tarjeta-habitacion">
-                                    <img src="./images/habitacion4/principal1.jpg"
-                                        alt="Habitación Familiar">
-                                    <div class="info-habitacion">
-                                        <h3>Departamento</h3>
-                                        <a href="/departamento" class="boton">Ver Más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-            <!-- Sección Galería -->
-            <section id="galeria" class="seccion">
-                <div class="contenedor">
-                    <h2>Galería</h2>
-                    <div class="envoltorio-galeria">
-                        <button class="boton-galeria izquierda"><i class="fas fa-chevron-left"></i></button>
-                        <div class="rejilla-galeria">
-                            <div class="elemento-galeria"><img src="/images/galeria/hotel-vista.jpg"
-                                    alt="Vista del hotel desde la plaza la Alameda">
-                            </div>
-                            <div class="elemento-galeria"><img src="/images/galeria/1-365.jpg" alt="Recepción">
-                            </div>           
-                            <div class="elemento-galeria"><img src="/images/galeria/1-360.jpg" alt="Comedor">
-                            </div> 
-                            <div class="elemento-galeria"><img src="/images/galeria/1-362.jpg" alt="Comedor">
-                            </div>                 
-                            <div class="elemento-galeria"><img src="/images/galeria/1-2.jpg" alt="Estar">
-                            </div>               
-                            <div class="elemento-galeria"><img src="/images/galeria/gh-14.jpg" alt="Estar">
-                            </div>               
-
-                            <div class="elemento-galeria"><img src="/images/galeria/estar.jpg" alt="Recepción">
-                            </div>
-                                        
-                        </div>
-                        <button class="boton-galeria derecha"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Modal de imagen -->
-                <div class="modal" id="modal">
-                    <span class="cerrar-modal">&times;</span>
-                    <img class="contenido-modal" id="modal-img">
+            <!-- Sección Principal -->
+            <section id="inicio" class="seccion-principal">
+                <div class="contenido-principal">
+                    <h1>Bienvenido al Grand Hotel</h1>
+                    <p>Descubra el placer de hospedarse en un lugar donde cada detalle está pensado para usted.</p>
+                    <a href="#habitaciones" class="boton">Ver Habitaciones</a>
                 </div>
             </section>
-            </main>
-            <!-- FOOTER -->
-            <%- include('partials/footer') %>
+            <!-- Sección oferta -->
+            <%# include('partials/promo') %>
+
+                <!-- Sección Sobre Nosotros -->
+                <section id="nosotros" class="seccion">
+                    <div class="contenedor">
+                        <h2>Sobre Nosotros</h2>
+                        <div class="contenido-nosotros">
+                            <div class="texto-nosotros">
+                                <h3>Un Hotel con historia</h3>
+                                <p>Grand Hotel es un hotel con la impronta de una familia Italiana con calidez de hogar.
+                                </p>
+
+                                <h3>Nuestros Valores</h3>
+                                <ul>
+                                    <li>Excelencia en servicio</li>
+                                    <li>Atención personalizada</li>
+                                    <li>Cuidado y seguridad grantizada</li>
+                                </ul>
+
+                            </div>
+                            <div class="imagen-nosotros">
+                                <img src="/images/galeria/1-368.jpg" alt="Nuestro Hotel">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Sección Ubicación -->
+                <section id="ubicacion" class="seccion">
+                    <div class="contenedor">
+                        <h2>Ubicación</h2>
+                        <div class="ubicacion-info-galeria">
+                            <div class="galeria-ubicacion">
+                                <img src="/images/ubicacion/alameda.jpg" alt="Foto de plaza La Alameda">
+                                <img src="/images/ubicacion/carrusel-juegos.jpg"
+                                    alt="Foto de juegos en plaza La Alameda">
+                                <img src="/images/ubicacion/catedral.jpg" alt="Foto de la Catedral">
+                                <img src="/images/ubicacion/plaza25deMayo.jpeg" alt="Foto de la plaza 25 de Mayo">
+
+                                <img src="/images/ubicacion/parquedelosvientos.jpeg"
+                                    alt="Foto del parque de los vientos">
+                                <img src="/images/ubicacion/eljumeal.JPG" alt="Foto de ciudad desde el dique">
+
+                            </div>
+                            <div class="ubicacion-info">
+                                <p>El hotel se encuentra ubicado en una zona privilegiada de la ciudad, frente a la
+                                    plaza
+                                    "La
+                                    alameda", un oasis
+                                    verde en plena ciudad. Un hermoso ambiente para disfrutar si tiene niños, ya que
+                                    tiene
+                                    muchos
+                                    juegos y un carrusel.</p>
+                                <p>Se encuentra a 5 minutos del casco centrico de la ciudad, dónde se encontrará con
+                                    la
+                                    plaza principal "25 de Mayo", la cual se encuentra frente a la Catedral
+                                    Basílica de Nuestra Señora del Valle. Allí también encontrará una zona de bares
+                                    frente a
+                                    la
+                                    plaza, museos, el cine teatro y el inicio de la peatonal de compras de la
+                                    ciudad.</p>
+                                <p>En la zona alta de la ciudad se encuentra el "Parque de los vientos" a metros del
+                                    dique "
+                                    El jumeal". Un lugar dónde se encuentra un punto panorámico que se ve toda
+                                    ciudad, sin
+                                    dudas un lugar recomendado para visitar. </p>
+                                <a href="https://maps.app.goo.gl/oRsNv8No4sNeqtjN8" target="_blank"
+                                    rel="noopener noreferrer" class="boton">Ver mapa</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Habitaciones -->
+                <section id="habitaciones" class="seccion fondo-claro">
+                    <div class="contenedor">
+                        <h2>Nuestras Habitaciones</h2>
+                        <div class="rejilla-habitaciones">
+
+                            <!-- Habitación 1 -->
+                            <div class="tarjeta-habitacion">
+                                <img src="/images/habitacion1/simple.jpeg" alt="Habitación simple">
+                                <div class="info-habitacion">
+                                    <h3>Habitación Simple</h3>
+
+                                    <a href="/habitacion-simple" class="boton">Ver Más</a>
+
+                                </div>
+                            </div>
+
+                            <!-- Habitación 2 -->
+                            <div class="tarjeta-habitacion">
+                                <img src="/images/habitacion2/1-260.jpg" alt="Habitación Doble">
+                                <div class="info-habitacion">
+                                    <h3>Habitación Doble</h3>
+
+                                    <a href="/habitacion-doble" class="boton">Ver Más</a>
+                                </div>
+                            </div>
+
+                            <!-- Habitación 3 -->
+                            <div class="tarjeta-habitacion">
+                                <img src="./images/habitacion3/principal.jpg" alt="Habitación Triple">
+                                <div class="info-habitacion">
+                                    <h3>Habitación Triple</h3>
+
+                                    <a href="/habitacion-triple" class="boton">Ver Más</a>
+                                </div>
+                            </div>
+
+                            <!-- Habitación 4 -->
+                            <div class="tarjeta-habitacion">
+                                <img src="./images/habitacion4/principal1.jpg" alt="Habitación Familiar">
+                                <div class="info-habitacion">
+                                    <h3>Departamento</h3>
+                                    <a href="/departamento" class="boton">Ver Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<!-- Sección Reseñas -->
+<section id="resenia" class="seccion fondo-claro">
+    <div class="contenedor">
+        <h2>Lo que dicen nuestros huéspedes</h2>
+
+        <!-- Resumen de puntuación -->
+        <div class="resenas-header">
+            <div class="calificacion-general">
+                <span class="puntaje">4.1</span>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="total-resenas">(Basado en opiniones reales de Google Maps)</span>
+            </div>
+        </div>
+
+        <!-- Carrusel con IDs específicos -->
+        <div class="envoltorio-galeria">
+            <button class="boton-galeria izquierda" id="btn-resenas-izq"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="rejilla-galeria" id="carrusel-resenas">
+                <% if (typeof resenas !== 'undefined' && resenas.length > 0) { %>
+                    <% resenas.forEach(resena => { %>
+                        <article class="tarjeta-resena">
+                            <header class="cabecera-resena">
+                                <img src="https://ui-avatars.com/api/?name=<%= encodeURIComponent(resena.nombre) %>&background=<%= resena.avatarBg %>&color=fff" 
+                                     alt="<%= resena.nombre %>" 
+                                     class="foto-usuario">
+                                <div class="datos-usuario">
+                                    <h3><%= resena.nombre %></h3>
+                                </div>
+                            </header>
+                            
+                            <div class="meta-resena">
+                                <div class="estrellas">
+                                    <% for(let i = 0; i < resena.estrellas; i++) { %>
+                                        <i class="fas fa-star"></i>
+                                    <% } %>
+                                    <% if (resena.mediaEstrella) { %>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    <% } %>
+                                    <% let estrellasVacias = 5 - resena.estrellas - (resena.mediaEstrella ? 1 : 0); %>
+                                    <% for(let i = 0; i < estrellasVacias; i++) { %>
+                                        <i class="far fa-star"></i>
+                                    <% } %>
+                                </div>
+                            </div>
+
+                            <p class="comentario"><%= resena.comentario %></p>
+                        </article>
+                    <% }); %>
+                <% } %>
+            </div>
+
+            <button class="boton-galeria derecha" id="btn-resenas-der"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Botón para ver más reseñas -->
+        <div class="contenedor-boton-resenas">
+            <a href="https://www.google.com/travel/hotels/entity/ChcIt5We4am3veEeGgsvZy8xdGQ0M2w2cBAB/reviews?q=grand%20hotel%20catamarca&ts=CAESCgoCCAMKAggDEAAabgpQEkwyJTB4OTQyNDI4YmYxZDBmOWZjZDoweDdlMWVkZDRiMTYwOTg2MWE6I1NhbiBGZXJuYW5kbyBEZWwgVmFsbGUgRGUgQ2F0YW1hcmNhGgASGhIUCgcI6g8QCBgaEgcI6g8QCBgbGAEyAhAAKgkKBToDQVJTGgA&ictx=3&ap=KigKEgnqmHfpSqY8wBHho_4aIXhQwBISCS_1LFDHRDzAEeGj_trpZ1DAMAA&qs=CAEgACgBOA1IAA&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CAAQ5JsGahcKEwioj4mL-viVAxUAAAAAHQAAAAAQAg" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="boton">
+                Ver más reseñas en Google Maps
+            </a>
+        </div>
+    </div>
+</section>
+                <!-- Sección Galería -->
+                <section id="galeria" class="seccion">
+                    <div class="contenedor">
+                        <h2>Galería</h2>
+                        <div class="envoltorio-galeria">
+                            <button class="boton-galeria izquierda"><i class="fas fa-chevron-left"></i></button>
+                            <div class="rejilla-galeria">
+                                <div class="elemento-galeria"><img src="/images/galeria/hotel-vista.jpg"
+                                        alt="Vista del hotel desde la plaza la Alameda">
+                                </div>
+                                <div class="elemento-galeria"><img src="/images/galeria/1-365.jpg" alt="Recepción">
+                                </div>
+                                <div class="elemento-galeria"><img src="/images/galeria/1-360.jpg" alt="Comedor">
+                                </div>
+                                <div class="elemento-galeria"><img src="/images/galeria/1-362.jpg" alt="Comedor">
+                                </div>
+                                <div class="elemento-galeria"><img src="/images/galeria/1-2.jpg" alt="Estar">
+                                </div>
+                                <div class="elemento-galeria"><img src="/images/galeria/gh-14.jpg" alt="Estar">
+                                </div>
+
+                                <div class="elemento-galeria"><img src="/images/galeria/estar.jpg" alt="Recepción">
+                                </div>
+
+                            </div>
+                            <button class="boton-galeria derecha"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Modal de imagen -->
+                    <div class="modal" id="modal">
+                        <span class="cerrar-modal">&times;</span>
+                        <img class="contenido-modal" id="modal-img">
+                    </div>
+                </section>
+        </main>
+        <!-- FOOTER -->
+        <%- include('partials/footer') %>
 
 
 
-                <script src="/javascripts/script.js"></script>
-    </body>
+            <script src="/javascripts/script.js"></script>
+</body>
 
-    </html>
+</html>
