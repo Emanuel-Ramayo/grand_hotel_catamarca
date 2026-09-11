@@ -1,58 +1,86 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // === MENÚ MÓVIL Y SUBMENÚ ===
   const botonMenuMovil = document.querySelector(".boton-menu-movil");
   const enlacesNavegacion = document.querySelector(".enlaces-navegacion");
 
-  // Toggle menú móvil
-  botonMenuMovil.addEventListener("click", function () {
-    enlacesNavegacion.classList.toggle("activo");
-  });
+  if (botonMenuMovil && enlacesNavegacion) {
+    botonMenuMovil.addEventListener("click", function () {
+      enlacesNavegacion.classList.toggle("activo");
+    });
+  }
 
-  // Submenú desplegable para móvil y escritorio
   const tieneSubmenu = document.querySelectorAll(".tiene-submenu > a");
-
   tieneSubmenu.forEach(function (element) {
     element.addEventListener("click", function (e) {
-      // Evita que se redirija al ancla
       e.preventDefault();
-
-      const submenu = this.nextElementSibling;
-
-      // Alterna la clase 'activo' para mostrar u ocultar el submenú
       this.parentElement.classList.toggle("activo");
     });
   });
-});
 
+  // === CARRUSEL DE GALERÍA DE FOTOS ===
+  // Especificamos '#galeria' para no seleccionar los botones de reseñas por error
+  const galeriaLeftBtn = document.querySelector('#galeria .boton-galeria.izquierda');
+  const galeriaRightBtn = document.querySelector('#galeria .boton-galeria.derecha');
+  const galleryGrid = document.querySelector('#galeria .rejilla-galeria');
+  let scrollTimeout;
 
-// Galería desplazable
-const leftBtn = document.querySelector('.boton-galeria.izquierda');
-const rightBtn = document.querySelector('.boton-galeria.derecha');
-const galleryGrid = document.querySelector('.rejilla-galeria');
+  if (galeriaLeftBtn && galeriaRightBtn && galleryGrid) {
+    galeriaLeftBtn.addEventListener('click', () => {
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      galleryGrid.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollTimeout = setTimeout(() => {}, 300);
+    });
 
-leftBtn.addEventListener('click', () => {
-  galleryGrid.scrollBy({ left: -300, behavior: 'smooth' });
-});
+    galeriaRightBtn.addEventListener('click', () => {
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      galleryGrid.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollTimeout = setTimeout(() => {}, 300);
+    });
+  }
 
-rightBtn.addEventListener('click', () => {
-  galleryGrid.scrollBy({ left: 300, behavior: 'smooth' });
-});
+  // === CARRUSEL DE RESEÑAS ===
+  const resenasLeftBtn = document.getElementById('btn-resenas-izq');
+  const resenasRightBtn = document.getElementById('btn-resenas-der');
+  const resenasGrid = document.getElementById('carrusel-resenas');
 
-// Modal de imagen
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const closeModal = document.querySelector('.cerrar-modal');
+  if (resenasLeftBtn && resenasRightBtn && resenasGrid) {
+    resenasLeftBtn.addEventListener('click', () => {
+      resenasGrid.scrollBy({ left: -320, behavior: 'smooth' });
+    });
 
-document.querySelectorAll('.elemento-galeria img').forEach(img => {
-  img.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImg.src = img.src;
-  });
-});
+    resenasRightBtn.addEventListener('click', () => {
+      resenasGrid.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
 
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+  // === MODAL DE IMAGEN EN GALERÍA ===
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const closeModal = document.querySelector('.cerrar-modal');
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) modal.style.display = 'none';
+  if (modal && modalImg) {
+    document.querySelectorAll('.elemento-galeria img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+      });
+    });
+
+    if (closeModal) {
+      closeModal.addEventListener('click', () => {
+        modal.classList.remove('show');
+        modal.classList.add('hide');
+        setTimeout(() => modal.style.display = 'none', 500);
+      });
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+        modal.classList.add('hide');
+        setTimeout(() => modal.style.display = 'none', 500);
+      }
+    });
+  }
 });

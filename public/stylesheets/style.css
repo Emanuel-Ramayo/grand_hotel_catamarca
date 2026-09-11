@@ -393,6 +393,7 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
   
 
 /* UBICACIÓN */
@@ -1054,5 +1055,280 @@ footer p {
 @media (min-width: 1024px) {
     .rejilla-habitaciones {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
+   SECCIÓN RESEÑAS
+   ========================================== */
+
+/* Cabecera y Calificación General */
+.resenas-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.calificacion-general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.calificacion-general .puntaje {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primario);
+    font-family: var(--fuente-titulo);
+}
+
+.calificacion-general .total-resenas {
+    color: var(--claro);
+    font-size: 0.95rem;
+}
+
+/* Grilla de Tarjetas */
+.rejilla-resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjeta Individual */
+.tarjeta-resena {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-resena:hover {
+    transform: translateY(-5px);
+}
+
+/* Usuario (Avatar + Nombre) */
+.cabecera-resena {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.foto-usuario {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.datos-usuario h3 {
+    font-size: 1rem;
+    color: var(--primario);
+    font-family: var(--fuente-titulo);
+    margin: 0;
+}
+
+/* Valoración con Estrellas */
+.meta-resena {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.estrellas {
+    color: #f4b400; /* Amarillo característico de Google Maps */
+    font-size: 0.95rem;
+}
+
+/* Texto de la Reseña */
+.comentario {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--texto);
+    margin: 0;
+}
+
+/* Botón Inferior */
+.contenedor-boton-resenas {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================== */
+
+/* Tablet y dispositivos medianos */
+@media (max-width: 1024px) {
+    .rejilla-resenas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .calificacion-general {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .calificacion-general .puntaje {
+        font-size: 2.5rem;
+    }
+
+    .rejilla-resenas {
+        grid-template-columns: 1fr; /* Una sola tarjeta por fila */
+        gap: 1.25rem;
+    }
+
+    .tarjeta-resena {
+        padding: 1.2rem;
+    }
+
+    .contenedor-boton-resenas .boton {
+        width: auto;
+        max-width: 90%;
+        display: inline-block;
+        margin: 10px auto;
+    }
+}
+/* ==========================================
+   SECCIÓN RESEÑAS (Reutilizando estilos de Galería)
+   ========================================== */
+
+/* Cabecera y Puntuación General */
+.resenas-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.calificacion-general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.calificacion-general .puntaje {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primario);
+    font-family: var(--fuente-titulo);
+}
+
+.calificacion-general .total-resenas {
+    color: var(--claro);
+    font-size: 0.95rem;
+}
+
+/* Ocultar barra de scroll en la rejilla flexible */
+.rejilla-galeria {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE y Edge */
+}
+
+.rejilla-galeria::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+}
+
+/* Adaptación de las tarjetas dentro del contenedor flex de la Galería */
+.rejilla-galeria .tarjeta-resena {
+    flex: 0 0 300px; /* Ancho fijo igual a .elemento-galeria */
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.rejilla-galeria .tarjeta-resena:hover {
+    transform: translateY(-5px);
+}
+
+/* Encabezado de la Tarjeta (Avatar + Nombre) */
+.cabecera-resena {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.foto-usuario {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.datos-usuario h3 {
+    font-size: 1rem;
+    color: var(--primario);
+    font-family: var(--fuente-titulo);
+    margin: 0;
+}
+
+/* Estrellas */
+.meta-resena {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.estrellas {
+    color: #f4b400; /* Amarillo clásico de Google Maps */
+    font-size: 0.95rem;
+}
+
+/* Comentario */
+.comentario {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--texto);
+    margin: 0;
+}
+
+/* Botón inferior */
+.contenedor-boton-resenas {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .calificacion-general {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .calificacion-general .puntaje {
+        font-size: 2.5rem;
+    }
+
+    /* En celulares achicamos levemente la tarjeta para que se vea parte de la siguiente */
+    .rejilla-galeria .tarjeta-resena {
+        flex: 0 0 260px;
+        padding: 1.2rem;
+    }
+
+    .contenedor-boton-resenas .boton {
+        width: auto;
+        max-width: 90%;
+        display: inline-block;
+        margin: 10px auto;
     }
 }
