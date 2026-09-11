@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Andrea Sol Guzman",
+    "avatarBg": "334c63",
+    "estrellas": 4,
+    "mediaEstrella": false,
+    "comentario": "Muy buen lugar, lo recomiendo! mi familia cuando vino a visitarme se alojo en este lugar y la verdad que bello, ellos estaban muy felices y nosotros muy felices por recomedarlos. Gracias por la bella atención."
+  },
+  {
+    "nombre": "Favio Abdala",
+    "avatarBg": "061329",
+    "estrellas": 5,
+    "mediaEstrella": false,
+    "comentario": "Excelente hotel. Muy buena atención y servicios. Habitación limpias y cuidadas."
+  },
+  {
+    "nombre": "Silvia Munnè",
+    "avatarBg": "758492",
+    "estrellas": 4,
+    "mediaEstrella": false,
+    "comentario": "Excelente atención. Muy cómodo. El servicio y el desayuno muy bueno y la ubicacion, frente a plaza la alameda, increíble."
+  },
+  {
+    "nombre": "Pedro Eyrea",
+    "avatarBg": "334c63",
+    "estrellas": 4,
+    "mediaEstrella": false,
+    "comentario": "Hotel muy recomendable. Ubicación: cerca del centro y frente a una plaza preciosa, muy cuidada y vistosa. El desayuno bueno muy acorde al precio y a la calidad del lugar."
+  },
+  {
+    "nombre": "Gustavo Pinatti",
+    "avatarBg": "061329",
+    "estrellas": 4,
+    "mediaEstrella": false,
+    "comentario": "Cómodo, amable. Buen desayuno!! Completo. Precio calidad excelente."
+  }
+]
